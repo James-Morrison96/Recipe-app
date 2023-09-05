@@ -12,6 +12,7 @@ function App() {
 
 
   useEffect(() => {
+    console.log("i AM gettomg");
     RecipesService.getRecipes().then((recipes) => setRecipes(recipes));
   }, []);
 
@@ -49,6 +50,11 @@ function App() {
   //   setRecipes(recipes.filter(booking => booking._id !== idToDelete));
   // }
 
+  const toggle = function(recipe){
+   
+          RecipesService.toggleFavourite(recipe).then((newRecipes)=>     setRecipes(newRecipes));
+
+  };
 
   return (
     <>
@@ -59,7 +65,7 @@ function App() {
 
       {filteredRecipes.map((recipe) => (
         <div key={recipe._id}>
-          <Recipe recipe={recipe} />
+          <Recipe recipe={recipe} toggleFavouriteAction={toggle}/>
         </div>
       ))}
     </>
