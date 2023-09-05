@@ -5,6 +5,17 @@ const RecipesService =  {
     return fetch(baseURL)
       .then(res => res.json());
   },
+  toggleFavourite(recipe){
+    recipe.favourite = !recipe.favourite;
+    return fetch(baseURL + recipe._id, {
+      method: 'PUT',
+      body: JSON.stringify(recipe),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json());
+  },
 
   // addRecipe(recipe) {
   //   return fetch(baseURL, {
@@ -17,16 +28,16 @@ const RecipesService =  {
   //     .then(res => res.json());
   // },
 
-  // updateRecipe(recipe) {
-  //   return fetch(baseURL + recipe._id, {
-  //     method: 'PUT',
-  //     body: JSON.stringify(recipe),
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //     .then(res => res.json());
-  // },
+  updateRecipe(newRecipe) {
+    return fetch(baseURL + newRecipe._id, {
+      method: 'PUT',
+      body: JSON.stringify(newRecipe),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json());
+  },
 
   // deleteRecipe(id) {
   //   return fetch(baseURL + id, {
