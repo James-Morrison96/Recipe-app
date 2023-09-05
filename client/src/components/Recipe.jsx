@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 import RecipesService from "../services/RecipesService";
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, toggleFavouriteAction }) => {
   
   const [show, setShow] = useState(false);
 
@@ -12,7 +12,7 @@ const Recipe = ({ recipe }) => {
         {recipe.title}
       </button>
       <button role="button" onClick={() => {
-        RecipesService.toggleFavourite(recipe);
+        toggleFavouriteAction(recipe);
         }}>
         {recipe.favourite ? "x" : "O"}
       </button>
