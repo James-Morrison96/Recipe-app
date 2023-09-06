@@ -11,6 +11,18 @@ const InputSearchBar = styled.input`
   font-size: larger;
 `
 
+const TitleHeader = styled.h1`
+  font-family: cursive;
+  font-weight: 500;
+  font-style: italic;
+`
+
+const SmallTitleHeader = styled.h2`
+  font-family: cursive;
+  font-weight: 500;
+  font-style: italic;
+`
+
 function App() {
 
   const [recipes, setRecipes] = useState([]);
@@ -82,8 +94,10 @@ function App() {
 
   return (
     <>
-
-
+    
+    <TitleHeader>Everyone's Cook Book!</TitleHeader>
+    <SmallTitleHeader>Find, add and adapt! Cook the meals you really want! </SmallTitleHeader>
+    
 
       <InputSearchBar type="text" placeholder="Search for tasty recipes!" onChange={(e) => setSearch(e.target.value.toLowerCase())} />
 
