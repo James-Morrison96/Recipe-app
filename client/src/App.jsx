@@ -37,6 +37,19 @@ function App() {
     }
   }, [search]);
 
+
+  useEffect(() => {
+    if (search && search.length > 2) {
+        setFilteredRecipes(recipes.filter((recipe) => {
+            return recipe.ingredients.some((ingredient) => 
+                ingredient.name.toLowerCase().includes(search.toLowerCase())
+            );
+        }));
+    } else {
+        setFilteredRecipes(recipes);
+    }
+}, [search]);
+
   // const createBooking = newBooking => {
   //   Recipeservice.addBooking(newBooking)
   //     .then(savedBooking => setRecipes([ ...recipes, savedBooking ]));
