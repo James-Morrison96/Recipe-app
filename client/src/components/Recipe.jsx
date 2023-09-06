@@ -2,12 +2,13 @@ import { useState } from "react";
 import React from "react";
 import RecipesService from "../services/RecipesService";
 import styled from "styled-components"
+import { FcLikePlaceholder } from "react-icons/fc"
+import { FcLike } from "react-icons/fc"
 
 const Button = styled.button`
   height: 60px;
   width: 270px;
-  border-bottom: 10px;
-  padding: 2px;
+  margin: 2px;
 `
 
 const FavouriteButton = styled.button`
@@ -28,7 +29,7 @@ const Recipe = ({ recipe, toggleFavouriteAction }) => {
       <FavouriteButton role="button" onClick={() => {
         toggleFavouriteAction(recipe);
         }}>
-        {recipe.favourite ? "x" : "O"}
+        {recipe.favourite ? <FcLike /> : <FcLikePlaceholder  />}
       </FavouriteButton>
       {show && (
         <div>

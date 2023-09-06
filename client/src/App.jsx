@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import RecipesService from "./services/RecipesService";
 import Recipe from "./components/Recipe";
+import styled from "styled-components"
+
+const InputSearchBar = styled.input`
+  height: 60px;
+  width: 330px;
+  margin: 40px;
+  font-size: larger;
+`
 
 function App() {
 
@@ -64,7 +72,7 @@ function App() {
 
 
 
-      <input type="text" onChange={(e) => setSearch(e.target.value.toLowerCase())} />
+      <InputSearchBar type="text" placeholder="Search for tasty recipes!" onChange={(e) => setSearch(e.target.value.toLowerCase())} />
 
       {filteredRecipes.map((recipe) => (
         <div key={recipe._id}>

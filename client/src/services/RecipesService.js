@@ -1,5 +1,5 @@
 const baseURL = 'http://localhost:9000/api/recipes/';
-
+import styled from "styled-components"
 const RecipesService =  {
   getRecipes() {
     return fetch(baseURL)
