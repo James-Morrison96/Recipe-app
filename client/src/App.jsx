@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import RecipesService from "./services/RecipesService";
 import Recipe from "./components/Recipe";
-import styled from "styled-components"
+import RecipeForm from "./components/RecipeForm";
+import styled from "styled-components";
 
 const InputSearchBar = styled.input`
   height: 60px;
@@ -39,6 +40,38 @@ function App() {
     }
     );
   }, []);
+
+  const objectifyIngredients = ingredientsString => {
+    // "beef (200 g), carrots (1kg), apples (1kg)"
+    // .split(", ")
+    const ingredientsStringArray = ingredientsString.split(",");
+    // ["beef (200 g)", "carrots (1kg)"]
+    // "beef (200 g)" -> "beef"  "200 g)"
+    const ingredientsObjetcts = ingredientsStringArray.map(stringIngr => {
+      stringIngr = stringIngr.trim();
+      const ingredientName = stringIngr.split("(")[0].trim(); //"beef"
+      const ingredientQuantity = stringIngr.split("(")[1].trim().slice(0, -1); // "200 g)" -> "200 g"
+      const ingredientObject = {"name":ingredientName, "quantity": ingredientQuantity};
+      return ingredientObject;
+    });
+
+    // [{"name":"beef", "quantity": "200 g"},{"name":"carrots", "quantity": "1kg"}]
+    return ingredientsObjetcts;
+
+
+
+  }
+  const createRecipe = newRecipe => {
+    // clean up the data:
+    // make instructions a list of string
+    newRecipe.instructions = newRecipe.instructions.split(", ")
+    // make ingredients a list of objects
+    newRecipe.ingredients=  objectifyIngredients(newRecipe.ingredients);
+
+
+    RecipesService.addRecipe(newRecipe)
+      .then(savedRecipe => setRecipes([ ...recipes, savedRecipe ]));
+  };
 
 
   useEffect(() => {
@@ -98,7 +131,10 @@ function App() {
     
     <TitleHeader>Everyone's Cook Book!</TitleHeader>
     <SmallTitleHeader>Find, add and adapt! Cook the meals you really want! </SmallTitleHeader>
-    
+
+    <div id="app">
+      <RecipeForm addRecipe={createRecipe}/>
+    </div>
 
       <InputSearchBar type="text" placeholder="Search for tasty recipes!" onChange={(e) => setSearch(e.target.value.toLowerCase())} />
 

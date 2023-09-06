@@ -22,6 +22,16 @@ const FavouriteButton = styled.button`
   padding: 2px;
   background-color: azure;
 `
+const StrongDescription = styled.strong`
+  color: white;
+`
+
+const StrongInstruction = styled.strong`
+  color: white;
+`
+const StrongIngredient = styled.strong`
+  color: white;
+`
 const Recipe = ({ recipe, toggleFavouriteAction }) => {
   
   const [show, setShow] = useState(false);
@@ -39,16 +49,16 @@ const Recipe = ({ recipe, toggleFavouriteAction }) => {
       {show && (
         <div>
           <div>
-            <strong>Description</strong>: {recipe.description}
+            <StrongDescription>Description</StrongDescription>: {recipe.description}
           </div>
           <div>
-            <strong>Instructions</strong>: {recipe.instructions}
+            <StrongInstruction>Instructions</StrongInstruction>: {recipe.instructions}
           </div>
           <div>
-            <strong>Ingredients</strong>:
+            <StrongIngredient>Ingredients</StrongIngredient>:
             <ul>
               {recipe.ingredients.map((ingredient) => (
-                <li>{ingredient.name}</li>
+                <li>{ingredient.name} amount:{ingredient.quantity}</li>
               ))}
             </ul>
           </div>
