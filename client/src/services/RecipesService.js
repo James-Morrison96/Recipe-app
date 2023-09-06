@@ -17,16 +17,16 @@ const RecipesService =  {
       .then(res => res.json());
   },
 
-  // addRecipe(recipe) {
-  //   return fetch(baseURL, {
-  //     method: 'POST',
-  //     body: JSON.stringify(recipe),
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //     .then(res => res.json());
-  // },
+  addRecipe(recipe) {
+    return fetch(baseURL, {
+      method: 'POST',
+      body: JSON.stringify(recipe),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json());
+  },
 
   updateRecipe(newRecipe) {
     return fetch(baseURL + newRecipe._id, {

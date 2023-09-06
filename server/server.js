@@ -18,7 +18,8 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
 
     app.post('/api/recipes', (req, res) => {
       const newData = req.body;
-      if (newData.hasOwnProperty("name") && newData.hasOwnProperty("email")) {
+
+      if (newData.hasOwnProperty("title")) {
         recipesCollection
           .insertOne(newData)
           .then((result) => {
@@ -31,7 +32,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
           });
       } else {
         res.status(400);  // bad request
-        res.send("please make sure booking has email and name");
+        res.send("404");
       }
     });
 
