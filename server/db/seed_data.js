@@ -331,13 +331,12 @@ db.recipes.insertMany([
         "To cook the dumplings, you can either steam them or pan-fry them. For pan-frying, heat vegetable oil in a skillet over medium heat. Place the dumplings in the skillet and cook until the bottoms are golden brown. Then, add water to the skillet and cover to steam the dumplings until fully cooked, about 5-7 minutes.",
         "Serve the dumplings with your choice of dipping sauce, such as soy sauce or a soy-vinegar dipping sauce."
     ]
- }
-]);
+ },
 
 {
-    "title"; "Steak Frites",
-    "description"; "A classic French dish featuring tender steak and crispy French fries.",
-    "ingredients"; [
+    "title": "Steak Frites",
+    "description": "A classic French dish featuring tender steak and crispy French fries.",
+    "ingredients": [
     {
     "name": "Sirloin steak",
     "quantity": "2 steaks, about 8 ounces each"
@@ -375,7 +374,7 @@ db.recipes.insertMany([
     "quantity": "2 tablespoons, chopped (for garnish)"
     }
     ],
-    "instructions"; [
+    "instructions": [
     "Preheat your oven to 200°F (93°C) to keep the steak warm while making the fries.",
     "Peel the potatoes and cut them into thin strips to make French fries. Rinse them in cold water to remove excess starch.",
     "In a large pot or deep fryer, heat vegetable oil to 350°F (175°C). Carefully add the potato strips in batches and fry until golden brown and crispy. Remove them with a slotted spoon and drain on paper towels. Sprinkle with salt while they are still hot.",
@@ -385,12 +384,12 @@ db.recipes.insertMany([
     "Serve the hot, crispy French fries alongside the tender sirloin steaks. Garnish with chopped fresh parsley.",
     "Enjoy your delicious homemade steak frites!"
     ]
-    }
+    },
 
     {
-        "title"; "Pan-Seared Sea Bass",
-        "description"; "A delightful seafood dish featuring pan-seared sea bass with a flavorful herb butter sauce.",
-        "ingredients"; [
+        "title": "Pan-Seared Sea Bass",
+        "description": "A delightful seafood dish featuring pan-seared sea bass with a flavorful herb butter sauce.",
+        "ingredients": [
         {
         "name": "Sea bass fillets",
         "quantity": "4 fillets, about 6 ounces each"
@@ -432,7 +431,7 @@ db.recipes.insertMany([
         "quantity": "2 tablespoons, chopped (for garnish)"
         }
         ],
-        "instructions"; [
+        "instructions": [
         "Season the sea bass fillets with salt and black pepper on both sides.",
         "In a large skillet, heat olive oil over medium-high heat.",
         "Add the sea bass fillets to the skillet, skin side down. Cook for 4-5 minutes until the skin is crispy and golden brown.",
@@ -443,12 +442,12 @@ db.recipes.insertMany([
         "Garnish with chopped fresh parsley and serve your pan-seared sea bass hot.",
         "Enjoy this delicious seafood dish!"
         ]
-        }
+        },
 
         {
-            "title"; "Loaded Nachos",
-            "description"; "A mouthwatering nachos recipe with melted cheese, jalapeños, and your favorite toppings.",
-            "ingredients"; [
+            "title": "Loaded Nachos",
+            "description": "A mouthwatering nachos recipe with melted cheese, jalapeños, and your favorite toppings.",
+            "ingredients": [
             {
             "name": "Tortilla chips",
             "quantity": "1 bag (10-12 ounces)"
@@ -506,7 +505,7 @@ db.recipes.insertMany([
             "quantity": "2 tablespoons"
             }
             ],
-            "instructions"; [
+            "instructions": [
             "Preheat your oven to 350°F (175°C).",
             "In a skillet, heat olive oil over medium heat. Add chopped onions and cook until they become translucent.",
             "Add the ground beef to the skillet and cook until browned. Season with salt and black pepper.",
@@ -518,12 +517,12 @@ db.recipes.insertMany([
             "Remove from the oven and garnish with sour cream, guacamole, salsa, and chopped fresh cilantro.",
             "Serve the loaded nachos hot and enjoy!"
             ]
-            }
+            },
 
             {
-                "title"; "Chicken Fajitas",
-                "description"; "A delicious and easy-to-make chicken fajitas recipe with flavorful spices and colorful bell peppers.",
-                "ingredients"; [
+                "title": "Chicken Fajitas",
+                "description": "A delicious and easy-to-make chicken fajitas recipe with flavorful spices and colorful bell peppers.",
+                "ingredients": [
                 {
                 "name": "Boneless, skinless chicken breasts",
                 "quantity": "2 breasts, thinly sliced"
@@ -589,7 +588,7 @@ db.recipes.insertMany([
                 "quantity": "2 tablespoons, chopped (for garnish)"
                 }
                 ],
-                "instructions"; [
+                "instructions": [
                 "In a bowl, combine olive oil, lime juice, minced garlic, chili powder, cumin, paprika, salt, and black pepper. Mix well.",
                 "Place the sliced chicken in a resealable plastic bag and pour half of the marinade over it. Seal the bag and refrigerate for at least 30 minutes, allowing the chicken to marinate.",
                 "Heat a large skillet over medium-high heat. Add the marinated chicken and cook until it's browned and cooked through, about 5-7 minutes. Remove the chicken from the skillet and set it aside.",
@@ -599,13 +598,13 @@ db.recipes.insertMany([
                 "Serve the chicken fajita mixture in warm tortillas, garnished with sour cream, salsa, guacamole, and chopped fresh cilantro.",
                 "Roll up the tortillas and enjoy your homemade chicken fajitas!"
                 ]
-                }
+                },
     
     
 {
-    "title"; "Caesar Salad",
-    "description"; "A classic Caesar salad with crisp romaine lettuce, homemade croutons, and a creamy Caesar dressing.",
-    "ingredients"; [
+    "title": "Caesar Salad",
+    "description": "A classic Caesar salad with crisp romaine lettuce, homemade croutons, and a creamy Caesar dressing.",
+    "ingredients": [
     {
     "name": "Romaine lettuce",
     "quantity": "1 head, torn into bite-sized pieces"
@@ -655,7 +654,7 @@ db.recipes.insertMany([
     "quantity": "To taste"
     }
     ],
-    "instructions"; [
+    "instructions": [
     "In a small bowl, whisk together minced garlic, lemon juice, Dijon mustard, Worcestershire sauce, anchovy fillets (if using), salt, and black pepper.",
     "Slowly drizzle in the olive oil while continuing to whisk until the dressing is well combined and emulsified.",
     "In a large salad bowl, place the torn romaine lettuce leaves.",
@@ -665,12 +664,12 @@ db.recipes.insertMany([
     "Serve the classic Caesar salad immediately as a side dish or add grilled chicken or shrimp for a complete meal.",
     "Enjoy your fresh and flavorful Caesar salad!"
     ]
-    }
+    },
 
     {
-        "title"; "Homemade Pizza",
-        "description"; "A classic homemade pizza recipe with a crispy crust, savory tomato sauce, and your favorite toppings.",
-        "ingredients"; [
+        "title": "Homemade Pizza",
+        "description": "A classic homemade pizza recipe with a crispy crust, savory tomato sauce, and your favorite toppings.",
+        "ingredients": [
         {
         "name": "Pizza dough",
         "quantity": "1 ball (store-bought or homemade)"
@@ -708,7 +707,7 @@ db.recipes.insertMany([
         "quantity": "As needed"
         }
         ],
-        "instructions"; [
+        "instructions": [
         "Preheat your oven to the highest temperature it can reach (usually around 475-500°F or 245-260°C). Place a pizza stone or inverted baking sheet in the oven as it preheats.",
         "Roll out the pizza dough on a lightly floured surface into your desired pizza shape and thickness.",
         "Sprinkle cornmeal on a pizza peel or another inverted baking sheet to prevent sticking. Transfer the rolled-out dough to the peel or sheet.",
@@ -721,12 +720,12 @@ db.recipes.insertMany([
         "Remove the pizza from the oven and let it cool for a minute before slicing.",
         "Slice, serve, and enjoy your homemade pizza!"
         ]
-        }
+        },
 
         {
-            "title"; "Seafood Paella",
-            "description"; "A flavorful and colorful Spanish seafood paella with saffron-infused rice, shrimp, mussels, and more.",
-            "ingredients"; [
+            "title": "Seafood Paella",
+            "description": "A flavorful and colorful Spanish seafood paella with saffron-infused rice, shrimp, mussels, and more.",
+            "ingredients": [
             {
             "name": "Chicken thighs",
             "quantity": "2, boneless and skinless, cut into small pieces"
@@ -792,7 +791,7 @@ db.recipes.insertMany([
             "quantity": "For garnish"
             }
             ],
-            "instructions"; [
+            "instructions": [
             "In a large, flat paella pan or a wide skillet, heat olive oil over medium-high heat.",
             "Add the chicken pieces and cook until browned on all sides. Remove and set aside.",
             "In the same pan, add diced onions, red bell pepper, and minced garlic. Sauté until the vegetables soften.",
@@ -803,12 +802,12 @@ db.recipes.insertMany([
             "Arrange the shrimp and mussels on top of the rice, cover the pan, and continue to cook for an additional 5-7 minutes or until the shrimp turn pink and the mussels open.",
             "Remove from heat, garnish with chopped fresh parsley, and serve your delicious seafood paella hot with lemon wedges on the side."
             ]
-            }
+            },
             
             {
-                "title"; "Classic Hot Dog",
-                "description"; "A timeless recipe for a classic hot dog with your favorite toppings and condiments.",
-                "ingredients"; [
+                "title": "Classic Hot Dog",
+                "description": "A timeless recipe for a classic hot dog with your favorite toppings and condiments.",
+                "ingredients": [
                 {
                 "name": "Hot dog buns",
                 "quantity": "4"
@@ -858,7 +857,7 @@ db.recipes.insertMany([
                 "quantity": "To taste"
                 }
                 ],
-                "instructions"; [
+                "instructions": [
                 "Preheat your grill or stovetop griddle to medium-high heat.",
                 "Place the hot dogs on the grill or griddle and cook, turning occasionally, until they are heated through and have grill marks, about 5-7 minutes.",
                 "While the hot dogs are cooking, lightly toast the hot dog buns on the grill or in a toaster.",
@@ -867,13 +866,13 @@ db.recipes.insertMany([
                 "Season with a pinch of salt and black pepper if desired.",
                 "Serve your classic hot dogs immediately, and enjoy!"
                 ]
-                }
+                },
 
 
                 {
-                    "title"; "Sushi Rolls",
-                    "description"; "A recipe for delicious homemade sushi rolls with your choice of fillings and toppings.",
-                    "ingredients"; [
+                    "title": "Sushi Rolls",
+                    "description": "A recipe for delicious homemade sushi rolls with your choice of fillings and toppings.",
+                    "ingredients": [
                     {
                     "name": "Sushi rice",
                     "quantity": "2 cups, cooked and seasoned with sushi vinegar"
@@ -919,7 +918,7 @@ db.recipes.insertMany([
                     "quantity": "For wrapping the rolling mat"
                     }
                     ],
-                    "instructions"; [
+                    "instructions": [
                     "Place a bamboo sushi rolling mat on a clean surface. Cover it with plastic wrap to prevent sticking.",
                     "Place a sheet of nori, shiny side down, on the plastic-covered mat.",
                     "Wet your hands to prevent the rice from sticking, and then spread a thin layer of seasoned sushi rice evenly over the nori, leaving about 1 inch of nori uncovered at the top edge.",
@@ -933,4 +932,4 @@ db.recipes.insertMany([
                     ]
                     }
             
-
+                ]);
