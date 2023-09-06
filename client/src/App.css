@@ -41,4 +41,11 @@
   color: #888;
 }
 
-
+body {
+  background: url('/public/recipe_app_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

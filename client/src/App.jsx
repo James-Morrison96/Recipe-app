@@ -15,6 +15,7 @@ const TitleHeader = styled.h1`
   font-family: cursive;
   font-weight: 500;
   font-style: italic;
+  color: red;
 `
 
 const SmallTitleHeader = styled.h2`
