@@ -12,8 +12,11 @@ function App() {
 
 
   useEffect(() => {
-    console.log("i AM gettomg");
-    RecipesService.getRecipes().then((recipes) => setRecipes(recipes));
+    RecipesService.getRecipes().then((recipes) => {
+      setRecipes(recipes);
+      setFilteredRecipes(recipes);
+    }
+    );
   }, []);
 
 
