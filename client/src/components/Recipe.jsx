@@ -1,21 +1,35 @@
 import { useState } from "react";
 import React from "react";
 import RecipesService from "../services/RecipesService";
+import styled from "styled-components"
 
+const Button = styled.button`
+  height: 60px;
+  width: 270px;
+  border-bottom: 10px;
+  padding: 2px;
+`
+
+const FavouriteButton = styled.button`
+  height: 60px;
+  width: 60px;
+  border-bottom: 10px;
+  padding: 2px;
+`
 const Recipe = ({ recipe, toggleFavouriteAction }) => {
   
   const [show, setShow] = useState(false);
 
   return (
     <div>
-      <button role="button" onClick={() => setShow(!show)}>
+      <Button className="recipeButton" role="button" onClick={() => setShow(!show)}>
         {recipe.title}
-      </button>
-      <button role="button" onClick={() => {
+      </Button>
+      <FavouriteButton role="button" onClick={() => {
         toggleFavouriteAction(recipe);
         }}>
         {recipe.favourite ? "x" : "O"}
-      </button>
+      </FavouriteButton>
       {show && (
         <div>
           <div>
