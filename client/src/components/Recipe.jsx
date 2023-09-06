@@ -9,6 +9,10 @@ const Button = styled.button`
   height: 60px;
   width: 270px;
   margin: 2px;
+  background-color: beige;
+  font-family: cursive;
+  font-size: large;
+  font-weight: 500;
 `
 
 const FavouriteButton = styled.button`
@@ -16,6 +20,7 @@ const FavouriteButton = styled.button`
   width: 60px;
   border-bottom: 10px;
   padding: 2px;
+  background-color: azure;
 `
 const Recipe = ({ recipe, toggleFavouriteAction }) => {
   
