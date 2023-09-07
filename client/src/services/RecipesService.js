@@ -42,7 +42,10 @@ const RecipesService =  {
   deleteRecipe(id) {
     return fetch(baseURL + id, {
       method: 'DELETE'
-    });
+    })
+    .then((res) => {
+      return res.json()
+    })
   }
 };
 

@@ -85,7 +85,10 @@ function App() {
 }, [search]);
 
   const deleteRecipe = idToDelete => {
-     RecipesService.deleteRecipe(idToDelete).then((newRecipes)=>     setRecipes(newRecipes));
+     RecipesService.deleteRecipe(idToDelete).then((newRecipes)=>     {
+      setRecipes(newRecipes)
+      setFilteredRecipes(newRecipes)
+    });
   };
 
   const toggle = function(recipe){
