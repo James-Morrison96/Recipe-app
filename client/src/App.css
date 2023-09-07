@@ -43,9 +43,18 @@
 
 body {
   background: url('/public/recipe_app_background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: repeat;
+  background-repeat: repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+}
+
+.recipe-container {
+  width: 300px; 
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #ccc; 
+  padding: 10px;
 }

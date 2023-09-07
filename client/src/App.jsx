@@ -99,11 +99,13 @@ function App() {
       <RecipeForm addRecipe={createRecipe}/>
     </div>
       <InputSearchBar type="text" placeholder="Search for tasty recipes!" onChange={(e) => setSearch(e.target.value.toLowerCase())} />
+      <div>
       {filteredRecipes.map((recipe) => (
         <div key={recipe._id}>
           <Recipe recipe={recipe} toggleFavouriteAction={toggle} deleteRecipe={deleteRecipe}/>
         </div>
       ))}
+      </div>
     </>
   );
 }
