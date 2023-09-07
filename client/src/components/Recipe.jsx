@@ -1,9 +1,9 @@
 import { useState } from "react";
 import React from "react";
-import RecipesService from "../services/RecipesService";
 import styled from "styled-components"
 import { FcLikePlaceholder } from "react-icons/fc"
 import { FcLike } from "react-icons/fc"
+import RecipeDelete from "./RecipeDelete";
 
 const Button = styled.button`
   height: 60px;
@@ -32,12 +32,15 @@ const StrongInstruction = styled.strong`
 const StrongIngredient = styled.strong`
   color: white;
 `
-const Recipe = ({ recipe, toggleFavouriteAction }) => {
+const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
   
   const [show, setShow] = useState(false);
-
+  
+  const handleDeleteRecipe = () => {
+      deleteRecipe(recipe._id);
+  };
   return (
-    <div>
+    <div >
       <Button className="recipeButton" role="button" onClick={() => setShow(!show)}>
         {recipe.title}
       </Button>
@@ -62,6 +65,9 @@ const Recipe = ({ recipe, toggleFavouriteAction }) => {
               ))}
             </ul>
           </div>
+          <button onClick={handleDeleteRecipe}>
+        <span>Delete Recipe</span> 
+      </button>
         </div>
       ) }
     </div>

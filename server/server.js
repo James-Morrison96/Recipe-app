@@ -31,7 +31,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
             res.json({ status: 500, error: err });
           });
       } else {
-        res.status(400);  // bad request
+        res.status(400);  
         res.send("404");
       }
     });

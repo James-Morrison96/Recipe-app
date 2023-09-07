@@ -39,11 +39,11 @@ const RecipesService =  {
       .then(res => res.json());
   },
 
-  // deleteRecipe(id) {
-  //   return fetch(baseURL + id, {
-  //     method: 'DELETE'
-  //   });
-  // }
+  deleteRecipe(id) {
+    return fetch(baseURL + id, {
+      method: 'DELETE'
+    });
+  }
 };
 
 export default RecipesService;
