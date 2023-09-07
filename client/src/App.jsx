@@ -61,7 +61,11 @@ function App() {
     newRecipe.instructions = newRecipe.instructions.split(", ")
     newRecipe.ingredients=  objectifyIngredients(newRecipe.ingredients);
     RecipesService.addRecipe(newRecipe)
-      .then(savedRecipe => setRecipes([ ...recipes, savedRecipe ]));
+      .then(savedRecipe => {
+        setRecipes([ ...recipes, savedRecipe ])
+        setFilteredRecipes([ ...recipes, savedRecipe ])
+      });
+      
   };
 
   useEffect(() => {
