@@ -24,14 +24,30 @@ const FavouriteButton = styled.button`
 `
 const StrongDescription = styled.strong`
   color: white;
+  font-size: larger;
+  text-decoration: underline;
 `
 
 const StrongInstruction = styled.strong`
   color: white;
+  font-size: larger;
+  text-decoration: underline;
 `
 const StrongIngredient = styled.strong`
   color: white;
+  font-size: larger;
+  text-decoration: underline;
 `
+const DescriptionDiv = styled.div`
+  color: white;
+`
+const InstructionDiv = styled.div`
+  color: white;
+`
+const IngredientDiv = styled.div`
+  color: white;
+`
+
 const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
   
   const [show, setShow] = useState(false);
@@ -41,9 +57,10 @@ const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
   };
   return (
 
-      <Button className="recipeButton" role="button" onClick={() => setShow(!show)}>
+      <div>
+      <RecipeButton className="recipeButton" role="button" onClick={() => setShow(!show)}>
         {recipe.title}
-      </Button>
+      </RecipeButton>
       <FavouriteButton role="button" onClick={() => {
         toggleFavouriteAction(recipe);
         }}>
@@ -51,20 +68,20 @@ const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
       </FavouriteButton>
       {show && (
         <div>
-          <div>
-            <StrongDescription>Description</StrongDescription>: {recipe.description}
-          </div>
-          <div>
-            <StrongInstruction>Instructions</StrongInstruction>: {recipe.instructions}
-          </div>
-          <div>
-            <StrongIngredient>Ingredients</StrongIngredient>:
+          <DescriptionDiv>
+            <StrongDescription>Description:</StrongDescription> {recipe.description}
+          </DescriptionDiv>
+          <IngredientDiv>
+            <StrongInstruction>Instructions:</StrongInstruction> {recipe.instructions}
+          </IngredientDiv>
+          <IngredientDiv>
+            <StrongIngredient>Ingredients:</StrongIngredient>
             <ul>
               {recipe.ingredients.map((ingredient) => (
                 <li>{ingredient.name} amount:{ingredient.quantity}</li>
               ))}
             </ul>
-          </div>
+          </IngredientDiv>
           <button onClick={handleDeleteRecipe}>
         <span>Delete Recipe</span> 
       </button>

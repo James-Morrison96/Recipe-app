@@ -4,6 +4,7 @@ import styled from "styled-components"
 const InputRecipeSections = styled.input`
     width: 240px;
     background-color: beige;
+    border-radius: 10px;
   `
 
   const AddRecipeH2 = styled.h2`
@@ -13,13 +14,14 @@ const InputRecipeSections = styled.input`
 
   const AddRecipeLabel = styled.label`
     color: white;
-    font-size: large;
+    font-size: larger;
   `
 
   const TextAreaAddRecipe = styled.textarea`
     background-color: beige;
     width: 240px;
     height: 120px;
+    border-radius: 10px;
   `
 
 const RecipeForm = ({addRecipe}) => {
