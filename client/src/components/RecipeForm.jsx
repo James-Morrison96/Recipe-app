@@ -34,7 +34,8 @@ const RecipeForm = ({addRecipe}) => {
         <input 
           type="text" 
           id="title" 
-          name="title" 
+          name="title"
+          placeholder="What's this tasty thing called?"
           value={title} 
           required 
           onChange={handleTitleChange}
@@ -45,7 +46,8 @@ const RecipeForm = ({addRecipe}) => {
         <input 
           type="text" 
           id="description" 
-          name="description" 
+          name="description"
+          placeholder="What's in it? Where's it from?" 
           value={description} 
           required 
           onChange={handleDescriptionChange}
@@ -58,6 +60,7 @@ const RecipeForm = ({addRecipe}) => {
           type="text" 
           id="ingredients" 
           name="ingredients" 
+          placeholder='eg chicken (400g)'
           value={ingredients} 
           onChange={handleIngredientsChange}
         />
@@ -68,7 +71,8 @@ const RecipeForm = ({addRecipe}) => {
         <input 
           type="text" 
           id="instructions" 
-          name="instructions" 
+          name="instructions"
+          placeholder="Tell me what to do!" 
           value={instructions} 
           onChange={handleInstructionsChange}
         />
