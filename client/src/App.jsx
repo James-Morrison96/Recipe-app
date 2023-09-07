@@ -12,6 +12,8 @@ const InputSearchBar = styled.input`
   margin: 40px;
   font-size: larger;
   background-color: beige;
+  border-radius: 10px;
+  border: 1px solid transparent;
 `
 
 const TitleHeader = styled.h1`
