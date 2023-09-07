@@ -43,8 +43,8 @@
 
 body {
   background: url('/public/recipe_app_background.jpg');
-  background-size: repeat;
-  background-repeat: repeat;
+  background-repeat: repeat-y;
+  background-size: contain;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
