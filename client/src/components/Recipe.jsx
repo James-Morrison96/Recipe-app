@@ -41,9 +41,9 @@ const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
   };
   return (
     <div >
-      <Button className="recipeButton" role="button" onClick={() => setShow(!show)}>
+      <RecipeButton className="recipeButton" role="button" onClick={() => setShow(!show)}>
         {recipe.title}
-      </Button>
+      </RecipeButton>
       <FavouriteButton role="button" onClick={() => {
         toggleFavouriteAction(recipe);
         }}>
