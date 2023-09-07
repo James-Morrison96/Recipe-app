@@ -88,7 +88,7 @@ const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
       </button>
         </div>
       ) }
-    </>
+    </div>
   );
 };
 
