@@ -5,7 +5,7 @@ import { FcLikePlaceholder } from "react-icons/fc"
 import { FcLike } from "react-icons/fc"
 import RecipeDelete from "./RecipeDelete";
 
-const Button = styled.button`
+const RecipeButton = styled.button`
   height: 60px;
   width: 270px;
   margin: 2px;
@@ -40,10 +40,10 @@ const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
       deleteRecipe(recipe._id);
   };
   return (
-    <div >
-      <RecipeButton className="recipeButton" role="button" onClick={() => setShow(!show)}>
+
+      <Button className="recipeButton" role="button" onClick={() => setShow(!show)}>
         {recipe.title}
-      </RecipeButton>
+      </Button>
       <FavouriteButton role="button" onClick={() => {
         toggleFavouriteAction(recipe);
         }}>
