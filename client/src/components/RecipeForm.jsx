@@ -1,4 +1,26 @@
 import { useState } from 'react';
+import styled from "styled-components"
+
+const InputRecipeSections = styled.input`
+    width: 240px;
+    background-color: beige;
+  `
+
+  const AddRecipeH2 = styled.h2`
+    color: white;
+  `
+
+
+  const AddRecipeLabel = styled.label`
+    color: white;
+    font-size: large;
+  `
+
+  const TextAreaAddRecipe = styled.textarea`
+    background-color: beige;
+    width: 240px;
+    height: 120px;
+  `
 
 const RecipeForm = ({addRecipe}) => {
   const [title, setTitle] = useState("");
@@ -26,12 +48,14 @@ const RecipeForm = ({addRecipe}) => {
     setInstructions("")
   }
 
+
+
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Add a recipe</h2>
+      <AddRecipeH2>Add a recipe</AddRecipeH2>
       <div className="group">
-        <label htmlFor="title">Recipe title:</label>
-        <input 
+        <AddRecipeLabel htmlFor="title">Recipe title:</AddRecipeLabel>
+        <InputRecipeSections 
           type="text" 
           id="title" 
           name="title"
@@ -42,8 +66,8 @@ const RecipeForm = ({addRecipe}) => {
         />
       </div>
       <div className="group">
-        <label htmlFor="description">Description:</label>
-        <input 
+        <AddRecipeLabel htmlFor="description">Description:</AddRecipeLabel>
+        <InputRecipeSections 
           type="text" 
           id="description" 
           name="description"
@@ -55,20 +79,20 @@ const RecipeForm = ({addRecipe}) => {
       </div>
 
       <div className="group">
-        <label htmlFor="ingredients">Ingredients:</label>
-        <input 
+        <AddRecipeLabel htmlFor="ingredients">Ingredients:</AddRecipeLabel>
+        <TextAreaAddRecipe 
           type="text" 
           id="ingredients" 
           name="ingredients" 
-          placeholder='eg chicken (400g)'
+          placeholder='eg chicken (400g), sweetcorn (1 tin), etc (etc)'
           value={ingredients} 
           onChange={handleIngredientsChange}
         />
       </div>
 
       <div className="group">
-        <label htmlFor="instructions">Instructions:</label>
-        <input 
+        <AddRecipeLabel htmlFor="instructions">Instructions:</AddRecipeLabel>
+        <TextAreaAddRecipe 
           type="text" 
           id="instructions" 
           name="instructions"

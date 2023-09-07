@@ -10,19 +10,21 @@ const InputSearchBar = styled.input`
   width: 330px;
   margin: 40px;
   font-size: larger;
+  background-color: beige;
 `
 
 const TitleHeader = styled.h1`
   font-family: cursive;
   font-weight: 500;
   font-style: italic;
-  color: red;
+  color: white;
 `
 
 const SmallTitleHeader = styled.h2`
   font-family: cursive;
   font-weight: 500;
   font-style: italic;
+  color: white;
 `
 
 function App() {
