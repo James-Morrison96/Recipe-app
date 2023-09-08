@@ -42,13 +42,14 @@
 }
 
 body {
-  background: url('/public/recipe_app_background.jpg');
+  background: url('/public/bac.jpg');
   /* background-repeat: repeat-y;
   background-size: contain; */
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px; */
+  background-size:contain;
 }
 
 .recipe-container {
