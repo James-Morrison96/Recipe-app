@@ -68,24 +68,39 @@ function App() {
       
   };
 
-  useEffect(() => {
-    if(search && search.length > 2){
-      setFilteredRecipes(recipes.filter((recipe) => recipe.title.toLowerCase().includes(search)))
-    } else {
-      setFilteredRecipes(recipes)
-    }
-  }, [search]);
+//   useEffect(() => {
+//     if(search && search.length > 2){
+//     setFilteredRecipes(recipes.filter((recipe) => recipe.title.toLowerCase().includes(search)))
+//     } else {
+//    setFilteredRecipes(recipes)
+//     }
+//   }, [search]);
 
-  useEffect(() => {
-    if (search && search.length > 2) {
-        setFilteredRecipes(recipes.filter((recipe) => {
-            return recipe.ingredients.some((ingredient) => 
-                ingredient.name.toLowerCase().includes(search.toLowerCase())
-            );
-        }));
-    } else {
-        setFilteredRecipes(recipes);
-    }
+//   useEffect(() => {
+//     if (search && search.length > 2) {
+//         setFilteredRecipes(recipes.filter((recipe) => {
+//             return recipe.ingredients.some((ingredient) => 
+//                 ingredient.name.toLowerCase().includes(search.toLowerCase())
+//             );
+//         }));
+//     } else {
+//         setFilteredRecipes(recipes);
+//     }
+// }, [search]);
+
+useEffect(() => {
+  if (search && search.length > 2) {
+      setFilteredRecipes(recipes.filter((recipe) => {
+          return (
+              recipe.title.toLowerCase().includes(search.toLowerCase()) ||
+              recipe.ingredients.some((ingredient) =>
+                  ingredient.name.toLowerCase().includes(search.toLowerCase())
+              )
+          );
+      }));
+  } else {
+      setFilteredRecipes(recipes);
+  }
 }, [search]);
 
   const deleteRecipe = idToDelete => {
