@@ -11,7 +11,7 @@ const InputRecipeSections = styled.input`
 
   const AddRecipeH2 = styled.h2`
     color: white;
-    
+    font-family: cursive;
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 
@@ -21,10 +21,10 @@ const InputRecipeSections = styled.input`
   const AddRecipeLabel = styled.label`
     color: white;
     font-size: larger;
-    
+    font-family: cursive;
   color: white;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-
+  
   `
 
   const TextAreaAddRecipe = styled.textarea`

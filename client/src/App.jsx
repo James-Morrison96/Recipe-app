@@ -124,7 +124,7 @@ useEffect(() => {
   return (
     <>
     
-    <TitleHeader>Everyone's Cook Book!</TitleHeader>
+    <TitleHeader>Everyone's Cookbook!</TitleHeader>
     <SmallTitleHeader>Find, add and adapt! Cook the meals you really want! </SmallTitleHeader>
     <div id="app">
       <RecipeForm addRecipe={createRecipe}/>
