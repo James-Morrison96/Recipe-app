@@ -5,16 +5,26 @@ const InputRecipeSections = styled.input`
     width: 240px;
     background-color: beige;
     border-radius: 10px;
+    
+  
   `
 
   const AddRecipeH2 = styled.h2`
     color: white;
+    
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
   `
 
 
   const AddRecipeLabel = styled.label`
     color: white;
     font-size: larger;
+    
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
   `
 
   const TextAreaAddRecipe = styled.textarea`

@@ -14,6 +14,7 @@ const InputSearchBar = styled.input`
   background-color: beige;
   border-radius: 10px;
   border: 1px solid transparent;
+  
 `
 
 const TitleHeader = styled.h1`
@@ -21,6 +22,9 @@ const TitleHeader = styled.h1`
   font-weight: 500;
   font-style: italic;
   color: white;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 
 const SmallTitleHeader = styled.h2`
@@ -28,6 +32,9 @@ const SmallTitleHeader = styled.h2`
   font-weight: 500;
   font-style: italic;
   color: white;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 
 function App() {

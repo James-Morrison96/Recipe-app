@@ -13,6 +13,10 @@ const RecipeButton = styled.button`
   font-family: cursive;
   font-size: large;
   font-weight: 500;
+  
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 
 const FavouriteButton = styled.button`
@@ -26,26 +30,50 @@ const StrongDescription = styled.strong`
   color: white;
   font-size: larger;
   text-decoration: underline;
+  
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 
 const StrongInstruction = styled.strong`
   color: white;
   font-size: larger;
   text-decoration: underline;
+  
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 const StrongIngredient = styled.strong`
   color: white;
   font-size: larger;
   text-decoration: underline;
+  
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 const DescriptionDiv = styled.div`
   color: white;
+  
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 const InstructionDiv = styled.div`
   color: white;
+  
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 const IngredientDiv = styled.div`
   color: white;
+  
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 `
 
 const Recipe = ({ recipe, toggleFavouriteAction, deleteRecipe }) => {
